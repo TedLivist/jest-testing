@@ -10,4 +10,9 @@ const subtract = (a, b) => {
   return a - b
 }
 
-module.exports = { add, subtract }
+const multiply = (...args) => {
+  let result = args.reduce((a, b) => a * b)
+  return result
+}
+
+module.exports = { add, subtract, multiply }
