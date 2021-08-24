@@ -1,4 +1,4 @@
-const { add, subtract, multiply } = require('./calculator')
+const { add, subtract, multiply, divide } = require('./calculator')
 
 describe('add function', () => {
   test('adds 2 numbers', () => {
@@ -39,5 +39,19 @@ describe('multiple function', () => {
 
   test('multiplies 3 numbers', () => {
     expect(multiply(1, 2, 3)).toBe(6)
+  })
+})
+
+describe('divide function', () => {
+  test('correctly divides two numbers', () => {
+    expect(divide(21, 3)).toBe(7)
+  })
+
+  test('returns Not-A-Number if one of the arguments is a string', () => {
+    expect(divide('str', 2)).toBe(NaN)
+  })
+
+  test('returns 0 when zero is the numerator', () => {
+    expect(divide(0, 2)).toBe(0)
   })
 })

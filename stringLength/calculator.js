@@ -15,4 +15,8 @@ const multiply = (...args) => {
   return result
 }
 
-module.exports = { add, subtract, multiply }
+const divide = (a, b) => {
+  return a / b
+}
+
+module.exports = { add, subtract, multiply, divide }
